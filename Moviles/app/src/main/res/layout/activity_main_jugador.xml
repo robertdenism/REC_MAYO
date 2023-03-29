@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ejJugador.MainJugador">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="467dp"
+        android:layout_height="817dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/captura_desde_2023_03_28_11_05_18" />
+
+    <ImageButton
+        android:id="@+id/idJugador2"
+        android:layout_width="166dp"
+        android:layout_height="166dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline25"
+        app:layout_constraintTop_toTopOf="@+id/guideline23"
+        app:srcCompat="@drawable/help__1_" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="204dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="419dp" />
+
+    <Button
+        android:id="@+id/idBotonJugar"
+        android:layout_width="172dp"
+        android:layout_height="68dp"
+        android:text="JUGAR"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline24" />
+
+    <ImageButton
+        android:id="@+id/idJugador1"
+        android:layout_width="166dp"
+        android:layout_height="166dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline24"
+        app:layout_constraintEnd_toStartOf="@+id/guideline25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline23"
+        app:srcCompat="@drawable/help__1_" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="326dp"
+        android:layout_height="92dp"
+        android:text="SELECCIONA JUGADOR"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#F4F4F4"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="210dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

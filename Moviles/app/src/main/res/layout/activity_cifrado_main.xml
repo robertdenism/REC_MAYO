@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ejCifrado.CifradoMain1">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="111dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="308dp" />
+
+    <RadioGroup
+        android:layout_width="224dp"
+        android:layout_height="97dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/idRadioSimple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cifrado Simple"
+            android:textSize="26dp" />
+
+        <RadioButton
+            android:id="@+id/idRadioMas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cifrado++"
+            android:textSize="26dp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/idPosiciones"
+        android:layout_width="72dp"
+        android:layout_height="61dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nº"
+        android:gravity="center"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idTextoACifrar"
+        android:layout_width="333dp"
+        android:layout_height="526dp"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Introduzca texto a cifrar"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="658dp" />
+
+    <Button
+        android:id="@+id/idCifrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cifrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
