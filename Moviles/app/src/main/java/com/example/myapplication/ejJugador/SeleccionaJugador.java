@@ -14,8 +14,11 @@ import android.widget.Toast;
 
 import com.example.myapplication.R;
 
+import java.util.ArrayList;
+
 public class SeleccionaJugador extends AppCompatActivity {
 
+    private static final int TAMANIO_ARRAY = 8;
     ImageButton jugador1, jugador2,jugador3,jugador4,jugador5,jugador6,jugador7,jugador8;
 
     @SuppressLint("MissingInflatedId")
@@ -26,6 +29,10 @@ public class SeleccionaJugador extends AppCompatActivity {
 
         int noJugador = getIntent().getExtras().getInt("Jugador");
         String paraGris = getIntent().getExtras().getString("paraGris");
+
+
+
+        Toast.makeText(this, paraGris, Toast.LENGTH_SHORT).show();
 
         jugador1 = findViewById(R.id.jugador1);
         jugador2 = findViewById(R.id.jugador2);
@@ -45,6 +52,8 @@ public class SeleccionaJugador extends AppCompatActivity {
         jugador7.setTag(R.drawable._7off);
         jugador8.setTag(R.drawable._9off);
 
+
+
         jugador1.setTag(R.drawable._1);
         jugador2.setTag(R.drawable._2);
         jugador3.setTag(R.drawable._3);
@@ -53,6 +62,23 @@ public class SeleccionaJugador extends AppCompatActivity {
         jugador6.setTag(R.drawable._6);
         jugador7.setTag(R.drawable._7);
         jugador8.setTag(R.drawable._9);
+//ESTO ES PARA UNA PRUEBA
+        String[] miArray = {
+                String.valueOf(jugador1.getTag()),
+                String.valueOf(jugador2.getTag()),
+                String.valueOf(jugador3.getTag()),
+                String.valueOf(jugador4.getTag()),
+                String.valueOf(jugador5.getTag()),
+                String.valueOf(jugador6.getTag()),
+                String.valueOf(jugador7.getTag()),
+                String.valueOf(jugador8.getTag())
+        };
+     //TODAVIA HAY QUE MIRARLO Y LAS EXCEPCIONES YA QUE NO RECIBE NADA AL PRINCIPIO
+        for(int i=0; i<=miArray.length; i++){
+            if ((miArray[i]).equals(paraGris)){
+                Toast.makeText(this, "hola", Toast.LENGTH_SHORT).show();
+            }
+        }
 
 
 
@@ -62,13 +88,7 @@ public class SeleccionaJugador extends AppCompatActivity {
             public void onClick(View view) {
 
                 envioImagenes(view, noJugador);
-
-                /*ImageButton imgButton = (ImageButton) view;
-                //Toast.makeText(SeleccionaJugador.this, imgButton.getTag().toString(), Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent();
-                intent.putExtra("JUGADOR", imgButton.getTag().toString());
-                setResult(Activity.RESULT_OK, intent);
-                onBackPressed();
+                
 
                 /*Drawable nuevaImagen = getResources().getDrawable(R.drawable._1off);
                 jugador1.setImageDrawable(nuevaImagen);*/
