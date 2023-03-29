@@ -25,6 +25,7 @@ public class SeleccionaJugador extends AppCompatActivity {
         setContentView(R.layout.activity_selecciona_jugador);
 
         int noJugador = getIntent().getExtras().getInt("Jugador");
+        String paraGris = getIntent().getExtras().getString("paraGris");
 
         jugador1 = findViewById(R.id.jugador1);
         jugador2 = findViewById(R.id.jugador2);
