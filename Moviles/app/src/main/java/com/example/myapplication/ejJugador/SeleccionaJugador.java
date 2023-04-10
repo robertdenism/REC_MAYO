@@ -88,7 +88,7 @@ public class SeleccionaJugador extends AppCompatActivity {
             public void onClick(View view) {
 
                 envioImagenes(view, noJugador);
-                
+
 
                 /*Drawable nuevaImagen = getResources().getDrawable(R.drawable._1off);
                 jugador1.setImageDrawable(nuevaImagen);*/
